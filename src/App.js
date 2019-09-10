@@ -1,9 +1,12 @@
 import React from 'react';
+import TheDate from './state/TheDate';
+import Counter from './state/Counter'
 
 function App() {
   return (
     <main className='App'>
-      {/* content goes here */}
+      {/* <TheDate /> */}
+      <Counter />
     </main>
   );
 }
