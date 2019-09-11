@@ -2,7 +2,8 @@ import React from 'react';
 // import TheDate from './state/TheDate';
 // import Counter from './state/Counter';
 // import HelloWorld from './state-drills/HelloWorld';
- import Bomb from './state-drills/Bomb';
+//  import Bomb from './state-drills/Bomb';
+import Roulette from './state-drills/Roulette'
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       {/* <TheDate /> */}
       {/* <Counter count= {123}/> */}
       {/* <HelloWorld /> */}
-      <Bomb />
+      {/* <Bomb /> */}
+      <Roulette />
     </main>
   );
 }
