@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import TheDate from './state/TheDate';
 // import Counter from './state/Counter';
 // import HelloWorld from './state-drills/HelloWorld';
@@ -8,21 +8,16 @@ import React from 'react';
 // import tabsProp from './Store'
 // import Accord from './state-drills/Accord'
 // import sections from './Store'
-import Demonym from './demonymapp/demonym'
+import DemonymApp from './demonymapp/demonymApp';
 
-function App() {
-  return (
-    <main className='App'>
-      {/* <TheDate /> */}
-      {/* <Counter count= {123}/> */}
-      {/* <HelloWorld /> */}
-      {/* <Bomb /> */}
-      {/* <Roulette /> */}
-      {/* <Tabs tabs= {tabsProp} prop1={"Hello props"}/> */}
-      {/* <Accord sections={sections}/> */}
-      <Demonym />
-    </main>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <DemonymApp />
+      </div>
+    );
+  }
 }
 
 export default App;

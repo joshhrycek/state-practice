@@ -1,19 +1,11 @@
-import React, { Component } from 'react';
-import './demonym.css'
+import React from 'react';
+import './demonym.css';
 
+export default function Demonym(props) {
 
-import CountrySelector from './countrySelector';
-
-
-class Demonym extends Component {
-  render() {
-    return (
-      <div className="demonym_app">
-        <CountrySelector countries={[{name:"Barbados"}, {name:"Bahrain"}]}/>
-        <Demonym name="Barbadian" country="Barbados"/>
-      </div>
-    );
-  }
+  return (
+    <div className="demonym">
+      A {props.name} comes from {props.country}
+    </div>
+  );
 }
-
-export default Demonym;
