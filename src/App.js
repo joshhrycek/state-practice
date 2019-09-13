@@ -6,8 +6,9 @@ import React from 'react';
 // import Roulette from './state-drills/Roulette'
 // import Tabs from './state/Tabs'
 // import tabsProp from './Store'
-import Accord from './state-drills/Accord'
-import sections from './Store'
+// import Accord from './state-drills/Accord'
+// import sections from './Store'
+import Demonym from './demonymapp/demonym'
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
       {/* <HelloWorld /> */}
       {/* <Bomb /> */}
       {/* <Roulette /> */}
-      {/* <Tabs tabs= {tabsProp} prop1={"fuck you"}/> */}
-      <Accord sections={sections}/>
+      {/* <Tabs tabs= {tabsProp} prop1={"Hello props"}/> */}
+      {/* <Accord sections={sections}/> */}
+      <Demonym />
     </main>
   );
 }
