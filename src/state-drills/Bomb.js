@@ -1,14 +1,6 @@
 import React from 'react';
 
-function checkTickTock(count) {
-    if (count % 2 === 0 && count < 8) {
-        return "tick"
-    }else if (!count % 2 === 0 && count < 8) {
-        return "tock"
-    }else if(count > 8) {
-        return "BOOOOM!!!"
-    }
-}
+
 
 class Bomb extends React.Component {
     state = {
@@ -18,24 +10,19 @@ class Bomb extends React.Component {
 
     componentDidMount() {
         setInterval(() => {
-            console.log(this.state.count)
-            console.log(this.state.prime)
             this.setState({
-                count: this.state.count + 1,
-                prime: checkTickTock(this.state.count)
+                count : +1
             })
         }, 1000)
     }
     componentWillUnmount() {
         
-        clearInterval(this.interval)
-        }
-
+    }
+    
     render() {
-        
         return (
             <div>
-                <p>It goes: {this.state.prime}</p>
+                <p></p>
             </div>
         )
     }
