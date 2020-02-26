@@ -1,43 +1,42 @@
 import React from 'react';
 
 class Accord extends React.Component {
-    static defaultProps = {
-        sections: []
-      };
-    
-      state = {
-        activeSectionIndex: null,
-      }
-    
-      handleSetActiveSecion = (sectionIndex) => {
-        this.setState({ activeSectionIndex: sectionIndex })
-      }
-    
-      renderItem(section, idx, activeSectionIndex) {
-        return (
-          <li className='Accordion__item' key={idx}>
-            <button
-              type='button'
-              onClick={() => this.handleSetActiveSecion(idx)}
-            >
-              {section.title}
-            </button>
-            {(activeSectionIndex === idx) && <p>{section.content}</p>}
-          </li>
-        )
-      }
-    
-      render() {
-        const { activeSectionIndex } = this.state
-        const { sections } = this.props
-        return (
-          <ul className='Accordion'>
-            {sections.map((section, idx) =>
-              this.renderItem(section, idx, activeSectionIndex)
-            )}
-          </ul>
-        )
-      }
+  static defaultProps = {
+    sections: []
+  }
+  
+  state = {
+    activeTab : null
+  }
+
+  handleButtonClick(i) {
+    this.setState({
+      activeTab : i
+    })
+  }
+
+  renderListItems(item, i) {
+    return (  
+      <li key={i}>
+        <button onClick={() => this.handleButtonClick(i)}>{item.title}</button>
+        {(this.state.activeTab === i) && <p>{item.content}</p>}
+      </li>
+    )
+  }
+
+  render () {
+    return (
+      <div>
+        <ul>
+          {
+            this.props.sections.map((item, i) => 
+              this.renderListItems(item, i))
+          }
+        </ul>
+      </div>
+    )
+  }
+
 }
 
 export default Accord;
